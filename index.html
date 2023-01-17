@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> first react app </title>
+</head>
+
+<body>
+    <!-- step 4 -->
+    <div id="root"></div>
+
+    <!-- step 1 -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <!-- step 2 -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- step 3 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- step 5 -->
+    <script type="text/babel">
+        const HelloWorld = () => {
+            return <h1>hello world!</h1>;
+        }
+
+        const App = () => {
+            return <HelloWorld />;
+        }
+
+        // step 6
+        ReactDOM.render(<App />, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
