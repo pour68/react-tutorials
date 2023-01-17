@@ -2,12 +2,12 @@
 
 ## History
 
-Founder: Jordan walke
-Birthdate: 2011 (Facebook's newsfeed feature)
-ReleaseYear: 2013 (V0.3.0)
-Details: Maintained by facebook and community
-Goals: Make SPA development easy and reliable, it also allows us to create reusable UI components
-Concept: A library for building user interfaces
+- Founder: Jordan walke
+- Birthdate: 2011 (Facebook's newsfeed feature)
+- ReleaseYear: 2013 (V0.3.0)
+- Details: Maintained by facebook and community
+- Goals: Make SPA development easy and reliable, it also allows us to create reusable UI components
+- Concept: A library for building user interfaces
 
 ## What is react?
 
