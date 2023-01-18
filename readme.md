@@ -73,16 +73,16 @@ react use:
 
 1.How to test if node.js is successfully installed?
 
-node -v || node --version
-npm -v || npm --version
+- node -v || node --version
+- npm -v || npm --version
 
 2.How to get react basic template?
 
-method 1:
+- method 1:
 npm uninstall -g create-react-app: to make sure install latest react library
 npx create-react-app ```<project name>```
 
-method 2:
+- method 2:
 npm create vite@latest
 npm install || npm i
 
