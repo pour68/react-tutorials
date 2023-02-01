@@ -182,10 +182,11 @@ import "./app.css";
 - import [name]CSS from "./[Name].module.css";
 - `<section className={`${[name]CSS.[className]}`}></section>`
 
-### css as an object
+### inline css in component
 
 const listStyle = {
-listStyleType: "none"
+listStyleType: "none",
+backgroundColor: "black"
 };
 
 `<ul style={listStyle}> <li>Item 1</li> <li> Item 2 </li> <li> Item 3 </li> </ul>`
