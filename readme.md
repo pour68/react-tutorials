@@ -194,7 +194,7 @@ listStyleType: "none"
 - import [name]CSS from "./[Name].module.css";
 - `<section className={`${[name]CSS.[className]}`}></section>`
 
-## Add sass to component
+### Use sass to component
 
 - vscode extension sass
 - npm i sass
