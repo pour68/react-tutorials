@@ -180,15 +180,15 @@ listStyleType: "none"
 
 - vite.config.js >
 
-  export default defineConfig({
-  plugins: [react()],
-  css: {
-  modules: {
-  localsConvention: "camelCase",
-  generateScopedName: "[local]",
-  },
-  },
-  });
+`export default defineConfig({`
+`plugins: [react()],`
+`css: {`
+`modules: {`
+`localsConvention: "camelCase",`
+`generateScopedName: "[local]",`
+`},`
+`},`
+`});`
 
 - filename format: [filename].module.css
 - import [name]CSS from "./[Name].module.css";
