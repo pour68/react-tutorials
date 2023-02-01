@@ -102,7 +102,7 @@ react use:
 
 5.VSCode setting
 
-    - setting > search emmet > add item:javascript value:javascriptreact
+    setting > search emmet > add item:javascript value:javascriptreact
 
 ## React file extensions
 
@@ -164,13 +164,11 @@ Example: find random name from an array.
 
 ## Styles
 
-### Add css to component
-
-## normal css
+### normal css
 
 import "./app.css";
 
-## css as an object
+### css as an object
 
 const listStyle = {
 listStyleType: "none"
@@ -178,18 +176,20 @@ listStyleType: "none"
 
 `<ul style={listStyle}> <li>Item 1</li> <li> Item 2 </li> <li> Item 3 </li> </ul>`
 
-## css module
+### css module
 
 - vite.config.js >
-  `export default defineConfig({`
-  `plugins: [react()],`
-  `css: {`
-  `modules: {`
-  `localsConvention: "camelCase",`
-  `generateScopedName: "[local]",`
-  `},`
-  `},`
-  `});`
+
+  export default defineConfig({
+  plugins: [react()],
+  css: {
+  modules: {
+  localsConvention: "camelCase",
+  generateScopedName: "[local]",
+  },
+  },
+  });
+
 - filename format: [filename].module.css
 - import [name]CSS from "./[Name].module.css";
 - `<section className={`${[name]CSS.[className]}`}></section>`
