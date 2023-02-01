@@ -158,23 +158,11 @@ Example: find random name from an array.
 - create footer component
 - reference them all in app.js file
 
-## Apply styles to components
-
-- add styles to header component
-
 ## Styles
 
 ### normal css
 
 import "./app.css";
-
-### css as an object
-
-const listStyle = {
-listStyleType: "none"
-};
-
-`<ul style={listStyle}> <li>Item 1</li> <li> Item 2 </li> <li> Item 3 </li> </ul>`
 
 ### css module
 
@@ -193,6 +181,14 @@ listStyleType: "none"
 - filename format: [filename].module.css
 - import [name]CSS from "./[Name].module.css";
 - `<section className={`${[name]CSS.[className]}`}></section>`
+
+### css as an object
+
+const listStyle = {
+listStyleType: "none"
+};
+
+`<ul style={listStyle}> <li>Item 1</li> <li> Item 2 </li> <li> Item 3 </li> </ul>`
 
 ### Use sass to component
 
