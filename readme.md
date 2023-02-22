@@ -1,6 +1,8 @@
 # React
 
-## History
+## Basic
+
+### History
 
 - Founder: Jordan walke
 - Birthdate: 2011 (Facebook's newsfeed feature)
@@ -9,31 +11,34 @@
 - Goals: Make SPA development easy and reliable, it also allows us to create reusable UI components
 - Concept: A library for building user interfaces
 
-## What is react?
+### What is react?
 
 An open-source library/tool for building UIs.
 
-## React vs Angular vs Vue
+### React vs Angular vs Vue
 
 - React is a library but angular/vue are framework
 - React is lightweight library for building UI but angular and vue are heavyweight frameworks or complete packages
 - React library is also can be called view-engine
 
-## Why react?
+### Why react?
 
 - Easy to install
 - Lots of compatible libraries
 - It's composable
 - Easy to learn
-- It's declarative (UI as component - react update/render component efficiently)
+- Suitable for rich user interfaces
+- Fast load speed
+- Scalable and flexible
+- Component-based architecture
 - Hirable skill
 - Maintained by skilled people
 
-## How does react work?
+### How does react work?
 
 React creates a VIRTUAL DOM of real DOM in memory, when data change that data-owned component will re-render.
 
-## Add react to simple website by cdn
+### Add react to simple website by cdn
 
 - react library (CDN)
 - react-dom library (CDN)
@@ -50,13 +55,14 @@ react use:
 - webpack
 - eslint
 
-## React prerequisite
+### React prerequisite
 
 - HTML
 - CSS
 - JavaScript
+- git and github
 
-## JavaScript topics needed for react
+### JavaScript topics needed for react
 
 - Arrow function
 - Variables
@@ -66,7 +72,7 @@ react use:
 - Spread operator
 - Ternary operator
 
-## Setup
+### Setup
 
 0.Tools
 
@@ -82,8 +88,10 @@ react use:
 
     - method 1:
 
+    - open terminal of vscode
     - npm uninstall -g create-react-app: to make sure install latest react library
-    - npx create-react-app `<project name>`
+    - npm init react-app `<project name>`
+    - npm start
 
     - method 2:
 
@@ -104,46 +112,58 @@ react use:
 
     setting > search emmet > add item:javascript value:javascriptreact
 
-## React file extensions
+### React file extensions
 
 jsx is extension for react files that means combination of javascript and xml.
+jsx also known as syntax extension to javascript.
 
-## File and folder structures
+### File and folder structures
 
-- node_modules: a container for all third-party packages/modules.
-- src: a folder/container for all components, pages, common, hooks, contexts, utils and ...
+- node_modules: a folder/container/repository for all third-party packages/modules.
+- src: a folder/container/repository for all components, pages, shared, hooks, contexts, utils and ...
 - index.html: react start point, output view.
 
-## Components
+### Components
 
 - what is a component?
-  a piece of ui.
+  a standalone, isolated and reusable parts of ui.
+  in fact you can consider a web app as a collection of components.
 
-## Basic libraries
+### Component name convension
+
+the best convension for naming a component is PascalCase format because its help react to distinguish between regular html elements and a component.
+
+### React capablities
+
+- Build and compose components
+- High performance rendering
+- Component rendering
+
+### Basic libraries
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-## Output in react
+### Output in react
 
 `const root = ReactDOM.createRoot(document.getElementById("root"));`
 `root.render(<App />);`
 
-## Variables
+### Variables
 
 - Can we define variable in a component?
   yes
 
 Exercise: make use of all value-type data types in react component.
 
-## Function
+### Function
 
 - Can we define function in a component?
   yes
 
 Example: find random name from an array.
 
-## Custom functional components
+### Custom functional components
 
 - Can we define custom components in react?
   yes
@@ -151,20 +171,20 @@ Example: find random name from an array.
 - what is standard of creating a custom functional component?
   every custom component should be create in components folder.
 
-### Challenge
+#### Challenge
 
 - create header component
 - create content component
 - create footer component
 - reference them all in app.js file
 
-## Styles
+### Styles
 
-### normal css
+#### normal css
 
 import "./app.css";
 
-### css module
+#### css module
 
 - vite.config.js >
 
@@ -182,7 +202,7 @@ import "./app.css";
 - import [name]CSS from "./[Name].module.css";
 - `<section className={`${[name]CSS.[className]}`}></section>`
 
-### inline css in component
+#### inline css in component
 
 const listStyle = {
 listStyleType: "none",
@@ -191,12 +211,90 @@ backgroundColor: "black"
 
 `<ul style={listStyle}> <li>Item 1</li> <li> Item 2 </li> <li> Item 3 </li> </ul>`
 
-### Use sass to component
+#### Use sass to component
 
-- vscode extension sass
-- npm i sass
+- npm install sass
+- create sass file
+- reference it in the component
 
-## Add props from parent component to child component
+#### Styled components
+
+- npm i styled-components
+- components > styled > [filename].style.js
+- `import styled from "styled-components"`
+- `const Button = styled.alert`
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  `;`
+
+#### How to add css frameworks to our project
+
+- bootstrap
+- tailwind
+- material ui
+
+### folder structures
+
+#### basic
+
+- src >
+  - tests
+    - components
+    - hooks
+  - assets
+  - components
+  - hooks
+- js
+
+#### intermediate
+
+- src >
+  - assets
+  - components
+  - pages
+  - layouts
+  - hooks
+  - services/contexts | redux
+  - helpers/utils
+- js | ts
+
+### advance
+
+- src >
+  - assets
+  - components
+    - form
+    - ui
+  - pages
+    - home | login | register | products | profile
+      - test
+  - layouts
+  - data/constants
+  - hooks
+  - contexts | redux
+  - services
+  - helpers/utils
+  - validations
+- ts
+
+### props
+
+#### props pros
+
+- Send multiple datatypes
+- Flexible dynamic contents
+
+#### props cons
+
+- one-way data-binding
+- props are readonly
+
+Note:
+
+Pure function: always returns the same output for the same args.
+
+#### Add props from parent component to child component
 
 `let movie = { id: 1, title: "", releaseYear: 1996, director: "", actors: [] }`
 
@@ -204,7 +302,7 @@ backgroundColor: "black"
 `<table> <Row id={movie.id} title={movie.title} /> </table>`
 `<table> <Row movie={movie} /> </table>`
 
-## Props and props drilling
+#### Props and props drilling
 
 - what do props help us accomplish?
   props help us to send data from parent component to child component.
@@ -222,7 +320,29 @@ Example:
 `<User name="pouria nayeb" phoneNumber="09354425459" email="pour68@outlook.com" />`
 `<Employee name="hamed abdeli" salary="60000" position="manager" company="nanochem" />`
 
-## list
+### Embed jsx expressions as an attribute
+
+import logo from "./logo.png";
+
+`const Logo = () => <img src={logo} alt="logo of ..." />`
+
+### Event
+
+- event
+- eventHandler
+- action
+
+#### Handling an event
+
+Example:
+
+- toggle
+- display input data
+- increase/decrease/set to zero
+
+## Intermediate
+
+### list
 
 - what does the map array do?
   loop through each object and map each one to new array.
@@ -236,21 +356,11 @@ Example:
 `const users = [ {}, {}, {} ]`
 `const planets = [ { name: "Earth", isGasPlanet: false }, { name: "Jupiter", isGasPlanet: true } ]`
 
-`<ul> {names.forEach((name, index) => <li key={index}> {name} </li>)} </ul>`
-`<> {users.forEach((user, index) => <User key={index} user={user} />)} </>`
-`<> {planets.forEach((user, index) => !planet.isGasPlanet && <Planet key={index} planet={planet} />)} </>`
+`<ul> {names.map((name, index) => <li key={index}> {name} </li>)} </ul>`
+`<> {users.map((user, index) => <User key={index} user={user} />)} </>`
+`<> {planets.map((user, index) => !planet.isGasPlanet && <Planet key={index} planet={planet} />)} </>`
 
-## .env variables
-
-## Handling an event
-
-Example:
-
-- toggle
-- display input data
-- increase/decrease/set to zero
-
-## Handling an event with params
+### Handling an event with params
 
 - todolist + add/delete/complete ops
 
@@ -259,7 +369,10 @@ Tricks:
 `const newArray = [...oldArray, newItem];`
 `const newObject = {...oldObject, prop: newValue};`
 
-## useState hook
+### useState hook
+
+- data in components that determines behavior
+- enable components to manage data
 
 import { useState } from "react";
 
@@ -278,13 +391,15 @@ create a variable and try to manipulate it in an event, you can see manipulated 
 - state or props which is immutable?
   state is mutable and props is immutable.
 
-## Life cycles
+### Link and routing
+
+### Life cycles
 
 - mounting
 - updating
 - unmounting
 
-## useEffect hook
+### useEffect hook
 
 import Axios from "axios";
 
@@ -312,13 +427,13 @@ Trick:
 // only try to access age prop when person is not null
 person?.age
 
-## Add react icons library
+### Add react icons library
 
-## Conditional rendering
+### Conditional rendering
 
-## Controlled components
+### Controlled components
 
-## React router dom
+### React router dom
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -327,7 +442,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 `<Routes> <Route path="/" element={<Home />} /> </Routes>`
 `</Router>`
 
-## Context hook
+### Context hook
 
 import { createContext } from "react";
 
@@ -342,7 +457,7 @@ import {AppContext} from "../App";
 
 `const { username, setUsername } = useContext(AppContext);`
 
-## React query
+### React query
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -365,7 +480,7 @@ const { data, isLoading, isError, refetch } = useQuery(["cat"], () => {
 return Axios.get("address").then(res => res.data);;
 });
 
-## React form
+### React form
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -391,7 +506,9 @@ const onSubmit = () => {}
 `<input type="text" {...register("comfirmPassword")} />`
 `</form>`
 
-## Custom hooks
+### .env variables
+
+### Custom hooks
 
 const useToggle = () => {
 const [state, setState] = useState(false);
@@ -438,3 +555,28 @@ const [count, setCount] = useState(initial);
     return {count, increase, decrease, restart};
 
 }
+
+## Advance
+
+### useContext
+
+- Context provider
+- Context customer
+
+```const ShoppingCartContext = React.createContext();```
+
+```const ShoppingCartProvider = ({ children }) => {```
+```const [shoppingCart, setShoppingCart] = useState([]);```
+
+```return <ShoppingCartContext.Provider value={{ shoppingCart, setShoppingCart }}>```
+```{children}```
+```</ShoppingCartContext.Provider>```
+```}```
+
+```export default ShoppingCartProvider;```
+
+### useReducer
+
+### useMemo
+
+### useCallback
